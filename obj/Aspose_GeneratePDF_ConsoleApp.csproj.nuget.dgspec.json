@@ -1,0 +1,67 @@
+{
+  "format": 1,
+  "restore": {
+    "F:\\Project\\Aspose_GeneratePDF_ConsoleApp\\Aspose_GeneratePDF_ConsoleApp\\Aspose_GeneratePDF_ConsoleApp.csproj": {}
+  },
+  "projects": {
+    "F:\\Project\\Aspose_GeneratePDF_ConsoleApp\\Aspose_GeneratePDF_ConsoleApp\\Aspose_GeneratePDF_ConsoleApp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\Project\\Aspose_GeneratePDF_ConsoleApp\\Aspose_GeneratePDF_ConsoleApp\\Aspose_GeneratePDF_ConsoleApp.csproj",
+        "projectName": "Aspose_GeneratePDF_ConsoleApp",
+        "projectPath": "F:\\Project\\Aspose_GeneratePDF_ConsoleApp\\Aspose_GeneratePDF_ConsoleApp\\Aspose_GeneratePDF_ConsoleApp.csproj",
+        "packagesPath": "C:\\Users\\Aditya\\.nuget\\packages\\",
+        "outputPath": "F:\\Project\\Aspose_GeneratePDF_ConsoleApp\\Aspose_GeneratePDF_ConsoleApp\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Aditya\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Aspose.Pdf": {
+              "target": "Package",
+              "version": "[19.9.0, )"
+            },
+            "HtmlAgilityPack": {
+              "target": "Package",
+              "version": "[1.11.14, )"
+            },
+            "Microsoft.NETCore.App": {
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}
