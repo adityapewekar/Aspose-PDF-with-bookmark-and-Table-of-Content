@@ -4,6 +4,7 @@ using Aspose.Pdf.Text;
 using HtmlAgilityPack;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 
@@ -11,52 +12,79 @@ namespace Aspose_GeneratePDF_ConsoleApp
 {
     class Program
     {
+        private const string DocumentFolderPath = "F:\\Project\\Aspose_GeneratePDF_ConsoleApp\\Aspose-PDF-with-bookmark-and-Table-of-Content\\Documents\\";
+        private const string PDFFolderPath = "F:\\Project\\Aspose_GeneratePDF_ConsoleApp\\Aspose-PDF-with-bookmark-and-Table-of-Content\\GeneratedPDF\\";
+        private const string PDFFileName = "MergedPDF.pdf";
+        private readonly string PDFFilePath;
+
+        Program()
+        {
+            PDFFilePath = PDFFolderPath + PDFFileName;
+        }
+        
         static void Main(string[] args)
         {
             Program obj = new Program();
-            string pdfFilePath = obj.PdfAppendTest();
+            string pdfFilePath = obj.GeneratePDF();
+
+            // Opens the folder of PDF generated file
+            Process.Start(new ProcessStartInfo()
+            {
+                FileName = PDFFolderPath,
+                UseShellExecute = true,
+                Verb = "open"
+            });
             Console.WriteLine(pdfFilePath);
             Console.ReadLine();
         }
 
-        public string PdfAppendTest()
+        /// <summary>
+        /// Responsible to merge different pdf documents and generate into one single PDF
+        /// along with the bookmark and table of content 
+        /// </summary>
+        /// <returns> Path of the PDF document </returns>
+        public string GeneratePDF()
         {
+            // Used to keep a track of current generated PDF page number
             int pdfPageNo = 2;
+
+            // Used to create bookmark and Table of content
             List<TOC> toc = new List<TOC>();
 
-
-            var AsposeLicensePath =Directory.GetCurrentDirectory()+ "//PdfFile//";
-            if (!Directory.Exists(AsposeLicensePath))
+            if (!Directory.Exists(PDFFolderPath))
             {
-                Directory.CreateDirectory(AsposeLicensePath);
+                Directory.CreateDirectory(PDFFolderPath);
             }
 
             //aspose words license
             //var AsposeLicenseFilePath = "C://Users//Aditya//.nuget//packages//aspose.pdf//19.9.0//lib//net4.0 - client//Aspose.Pdf.lic";
-
             //if (System.IO.File.Exists(AsposeLicenseFilePath))
             //{
             //    Aspose.Pdf.License WordsLic = new Aspose.Pdf.License();
             //    WordsLic.SetLicense(AsposeLicenseFilePath);
             //}
 
-            if (File.Exists(Directory.GetCurrentDirectory() + "//PdfFile///merged.pdf"))
+            if (File.Exists(PDFFilePath))
             {
-                File.Delete(Directory.GetCurrentDirectory() + "//PdfFile///merged.pdf");
+                File.Delete(PDFFilePath);
             }
 
+            // Used to maintaint the list of all the documents to be merged.
             List<String> inputDocs = new List<String>();
-            foreach (string file in Directory.EnumerateFiles(Directory.GetCurrentDirectory(), "*.pdf"))
+
+            // Fetches all the documents from the specified DocumentFolderPath
+            foreach (string file in Directory.EnumerateFiles(DocumentFolderPath, "*.pdf"))
             {
                 inputDocs.Add(file);
             }
 
-            Aspose.Pdf.Document targetDoc = new Aspose.Pdf.Document();
-            Aspose.Pdf.Document doc;
+            Document targetDoc = new Document();
+            Document doc;
 
             for (int i = 0; i < inputDocs.Count; i++)
             {
-                doc = new Aspose.Pdf.Document(inputDocs[i]);
+                doc = new Document(inputDocs[i]);
+
                 toc.Add(new TOC
                 {
                     BookmarkName=Path.GetFileName(doc.FileName),
@@ -67,7 +95,7 @@ namespace Aspose_GeneratePDF_ConsoleApp
                 targetDoc.Pages.Add(doc.Pages);
 
                 #region Code to generate Blank page between two documents
-                Aspose.Pdf.Page pageI = targetDoc.Pages.Insert(pdfPageNo);
+                Page pageI = targetDoc.Pages.Insert(pdfPageNo);
                 TextFragment textI = new TextFragment("Blank Page");
                 pageI.Paragraphs.Add(textI);
 
@@ -90,7 +118,7 @@ namespace Aspose_GeneratePDF_ConsoleApp
             HtmlDocument htmlDoc = new HtmlDocument();
             htmlDoc.LoadHtml(html);
 
-            Aspose.Pdf.Page tocPage = targetDoc.Pages.Insert(1);
+            Page tocPage = targetDoc.Pages.Insert(1);
             tocPage.Background = Aspose.Pdf.Color.FromRgb(System.Drawing.Color.White);
 
             // Create object to represent TOC information
@@ -107,7 +135,7 @@ namespace Aspose_GeneratePDF_ConsoleApp
             foreach(var item in toc)
             {
                 // Create Heading object
-                Aspose.Pdf.Heading heading2 = new Aspose.Pdf.Heading(1);
+                Heading heading2 = new Heading(1);
 
                 TextSegment segment2 = new TextSegment();
                 segment2 = new TextSegment();
@@ -123,36 +151,29 @@ namespace Aspose_GeneratePDF_ConsoleApp
                 // Destination coordinate
                 segment2.Text = item.BookmarkName;
 
-
                 // Add heading to page containing TOC
                 tocPage.Paragraphs.Add(heading2);
             }
             #endregion
 
-            targetDoc.Save(Directory.GetCurrentDirectory() + "//PdfFile//merged.pdf");
+            targetDoc.Save(PDFFilePath);
 
             #region Code to bookmark the pages
             // For complete examples and data files, please go to https://github.com/aspose-pdf/Aspose.Pdf-for-.NET
-            // The path to the documents directory.
-            string dataDir = Directory.GetCurrentDirectory() + "//PdfFile//";
 
             // Open document
             PdfBookmarkEditor bookmarkEditor = new PdfBookmarkEditor();
-            bookmarkEditor.BindPdf(dataDir + "merged.pdf");
-            // Bookmark name list
-            string[] bookmarkList = { "First" };
-            // Page list
-            int[] pageList = { 1 };
-            // Create bookmark of a range of pages
+            bookmarkEditor.BindPdf(PDFFilePath);
 
+            // Create bookmark of a range of pages
             foreach(var item in toc)
                 bookmarkEditor.CreateBookmarkOfPage(item.BookmarkName, item.PageNo);
 
             // Save updated PDF file
-            bookmarkEditor.Save(dataDir + "merged.pdf");
+            bookmarkEditor.Save(PDFFilePath);
             #endregion
 
-            return Directory.GetCurrentDirectory() + "//PdfFile//merged.pdf";
+            return PDFFilePath;
 
         }
     }

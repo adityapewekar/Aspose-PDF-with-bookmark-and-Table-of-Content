@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Project\\Aspose_GeneratePDF_ConsoleApp\\Aspose_GeneratePDF_ConsoleApp\\Aspose_GeneratePDF_ConsoleApp.csproj": {}
+    "F:\\Project\\Aspose_GeneratePDF_ConsoleApp\\Aspose-PDF-with-bookmark-and-Table-of-Content\\Aspose_GeneratePDF_ConsoleApp.csproj": {}
   },
   "projects": {
-    "F:\\Project\\Aspose_GeneratePDF_ConsoleApp\\Aspose_GeneratePDF_ConsoleApp\\Aspose_GeneratePDF_ConsoleApp.csproj": {
+    "F:\\Project\\Aspose_GeneratePDF_ConsoleApp\\Aspose-PDF-with-bookmark-and-Table-of-Content\\Aspose_GeneratePDF_ConsoleApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Project\\Aspose_GeneratePDF_ConsoleApp\\Aspose_GeneratePDF_ConsoleApp\\Aspose_GeneratePDF_ConsoleApp.csproj",
+        "projectUniqueName": "F:\\Project\\Aspose_GeneratePDF_ConsoleApp\\Aspose-PDF-with-bookmark-and-Table-of-Content\\Aspose_GeneratePDF_ConsoleApp.csproj",
         "projectName": "Aspose_GeneratePDF_ConsoleApp",
-        "projectPath": "F:\\Project\\Aspose_GeneratePDF_ConsoleApp\\Aspose_GeneratePDF_ConsoleApp\\Aspose_GeneratePDF_ConsoleApp.csproj",
+        "projectPath": "F:\\Project\\Aspose_GeneratePDF_ConsoleApp\\Aspose-PDF-with-bookmark-and-Table-of-Content\\Aspose_GeneratePDF_ConsoleApp.csproj",
         "packagesPath": "C:\\Users\\Aditya\\.nuget\\packages\\",
-        "outputPath": "F:\\Project\\Aspose_GeneratePDF_ConsoleApp\\Aspose_GeneratePDF_ConsoleApp\\obj\\",
+        "outputPath": "F:\\Project\\Aspose_GeneratePDF_ConsoleApp\\Aspose-PDF-with-bookmark-and-Table-of-Content\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

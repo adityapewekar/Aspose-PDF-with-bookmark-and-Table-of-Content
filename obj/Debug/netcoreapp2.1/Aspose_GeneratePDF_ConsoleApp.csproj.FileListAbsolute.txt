@@ -9,3 +9,14 @@ F:\Project\Aspose_GeneratePDF_ConsoleApp\Aspose_GeneratePDF_ConsoleApp\obj\Debug
 F:\Project\Aspose_GeneratePDF_ConsoleApp\Aspose_GeneratePDF_ConsoleApp\bin\Debug\netcoreapp2.1\Aspose_GeneratePDF_ConsoleApp.pdb
 F:\Project\Aspose_GeneratePDF_ConsoleApp\Aspose_GeneratePDF_ConsoleApp\obj\Debug\netcoreapp2.1\Aspose_GeneratePDF_ConsoleApp.dll
 F:\Project\Aspose_GeneratePDF_ConsoleApp\Aspose_GeneratePDF_ConsoleApp\obj\Debug\netcoreapp2.1\Aspose_GeneratePDF_ConsoleApp.pdb
+F:\Project\Aspose_GeneratePDF_ConsoleApp\Aspose-PDF-with-bookmark-and-Table-of-Content\bin\Debug\netcoreapp2.1\Aspose_GeneratePDF_ConsoleApp.deps.json
+F:\Project\Aspose_GeneratePDF_ConsoleApp\Aspose-PDF-with-bookmark-and-Table-of-Content\bin\Debug\netcoreapp2.1\Aspose_GeneratePDF_ConsoleApp.runtimeconfig.json
+F:\Project\Aspose_GeneratePDF_ConsoleApp\Aspose-PDF-with-bookmark-and-Table-of-Content\bin\Debug\netcoreapp2.1\Aspose_GeneratePDF_ConsoleApp.runtimeconfig.dev.json
+F:\Project\Aspose_GeneratePDF_ConsoleApp\Aspose-PDF-with-bookmark-and-Table-of-Content\bin\Debug\netcoreapp2.1\Aspose_GeneratePDF_ConsoleApp.dll
+F:\Project\Aspose_GeneratePDF_ConsoleApp\Aspose-PDF-with-bookmark-and-Table-of-Content\bin\Debug\netcoreapp2.1\Aspose_GeneratePDF_ConsoleApp.pdb
+F:\Project\Aspose_GeneratePDF_ConsoleApp\Aspose-PDF-with-bookmark-and-Table-of-Content\obj\Debug\netcoreapp2.1\Aspose_GeneratePDF_ConsoleApp.csprojAssemblyReference.cache
+F:\Project\Aspose_GeneratePDF_ConsoleApp\Aspose-PDF-with-bookmark-and-Table-of-Content\obj\Debug\netcoreapp2.1\Aspose_GeneratePDF_ConsoleApp.csproj.CoreCompileInputs.cache
+F:\Project\Aspose_GeneratePDF_ConsoleApp\Aspose-PDF-with-bookmark-and-Table-of-Content\obj\Debug\netcoreapp2.1\Aspose_GeneratePDF_ConsoleApp.AssemblyInfoInputs.cache
+F:\Project\Aspose_GeneratePDF_ConsoleApp\Aspose-PDF-with-bookmark-and-Table-of-Content\obj\Debug\netcoreapp2.1\Aspose_GeneratePDF_ConsoleApp.AssemblyInfo.cs
+F:\Project\Aspose_GeneratePDF_ConsoleApp\Aspose-PDF-with-bookmark-and-Table-of-Content\obj\Debug\netcoreapp2.1\Aspose_GeneratePDF_ConsoleApp.dll
+F:\Project\Aspose_GeneratePDF_ConsoleApp\Aspose-PDF-with-bookmark-and-Table-of-Content\obj\Debug\netcoreapp2.1\Aspose_GeneratePDF_ConsoleApp.pdb
